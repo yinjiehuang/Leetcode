@@ -35,8 +35,8 @@ public class LargestNumber {
 
 class Comp implements Comparator<String> {
         public int compare(String a, String b) {
-                int vala = Integer.parseInt(a + b);
-                int valb = Integer.parseInt(b + a);
-                return valb - vala;
+                long vala = Long.parseLong(a + b);
+                long valb = Long.parseLong(b + a);
+                return (valb > vala) ? 1 : (valb < vala) ? -1 : 0;
         }
 }
